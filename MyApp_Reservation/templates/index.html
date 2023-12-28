@@ -1,0 +1,282 @@
+{% extends 'mains/main.html' %}
+{% load static %}
+
+
+{% block title %} Ticket Reservations All {% endblock title %}
+
+{% block content %}
+
+<div class="back">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-lg-12 ">
+                <div class="contents_center">
+                    <h1 class="wel mb-3">Book Now Tickets</h1>
+                    <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Amet sequi sit quam repellat perferendis facere. Sapiente accusamus, error,
+                        libero rerum eligendi illo doloribus
+                        temporibus autem numquam laudantium obcaecati repudiandae earum?</p>
+                    <div class="btns1 mt-4">
+                        {% if request.user.is_authenticated %}
+                        <button class="btns2"><a href="{%  url 'customer_details'  %}">Book Now</a></button>
+                        {% else %}
+                        <button class="btns3"><a href="{%  url 'home' %}">Read More</a></button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="boxes">
+                <div class="col-md-12 col-lg-12 ">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box">
+                                <div class="box_all">
+                                    <img src="{% static 'css/11.avif' %}" width="150px"  height="150px" alt="" style="margin-left:10px; margin-top:13px; border-radius: 15px; " >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-4 mx-2">Grap Up to 15% OFF*</h6>
+                                    <div class="boders"></div>
+                                    <p class="mx-2 mt-2">A paragraph is a series of sentences that are organized and</p>
+                                    <a href="" class="text-success mx-4 mb-5" >Book Now</a>
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box">
+                                <div class="box_all">
+                                    <img src="{% static 'css/12.avif' %}" width="150px"  height="150px" alt="" style="margin-left:10px; margin-top:13px; border-radius: 15px; " >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-4 mx-2">Grap Up to 15% OFF*</h6>
+                                    <div class="boders"></div>
+                                    <p class="mx-2 mt-2">A paragraph is a series of sentences that are organized and</p>
+                                    <a href="" class="text-success mx-4 mb-5" >Book Now</a>
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box">
+                                <div class="box_all">
+                                    <img src="{% static 'css/13.avif' %}" width="150px"  height="150px" alt="" style="margin-left:10px; margin-top:13px; border-radius: 15px; " >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-4 mx-2">Grap Up to 15% OFF*</h6>
+                                    <div class="boders"></div>
+                                    <p class="mx-2 mt-2">A paragraph is a series of sentences that are organized and</p>
+                                    <a href="" class="text-success mx-4 mb-5" >Book Now</a>
+                                </div>
+                            </div >
+                        </div>
+                    </div>
+    
+                    <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box">
+                                <div class="box_all">
+                                    <img src="{% static 'css/14.avif' %}" width="150px"  height="150px" alt="" style="margin-left:10px; margin-top:13px; border-radius: 15px; " >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-4 mx-2">Grap Up to 15% OFF*</h6>
+                                    <div class="boders"></div>
+                                    <p class="mx-2 mt-2">A paragraph is a series of sentences that are organized and</p>
+                                    <a href="" class="text-success mx-4 mb-5" >Book Now</a>
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box">
+                                <div class="box_all">
+                                    <img src="{% static 'css/15.avif' %}" width="150px"  height="150px" alt="" style="margin-left:10px; margin-top:13px; border-radius: 15px; " >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-4 mx-2">Grap Up to 15% OFF*</h6>
+                                    <div class="boders"></div>
+                                    <p class="mx-2 mt-2">A paragraph is a series of sentences that are organized and</p>
+                                    <a href="" class="text-success mx-4 mb-5" >Book Now</a>
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box">
+                                <div class="box_all">
+                                    <img src="{% static 'css/16.avif' %}" width="150px"  height="150px" alt="" style="margin-left:10px; margin-top:13px; border-radius: 15px; " >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-4 mx-2">Grap Up to 15% OFF*</h6>
+                                    <div class="boders"></div>
+                                    <p class="mx-2 mt-2">A paragraph is a series of sentences that are organized and</p>
+                                    <a href="" class="text-success mx-4 mb-5" >Book Now</a>
+                                </div>
+                            </div >
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="boxes1">
+                <div class="col-md-12 col-lg-12 ">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box1">
+                                <div class="box_all">
+                                    <img src="{% static 'css/pexels-torsten-dettlaff-69866.jpg' %}"  alt=""  >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                    <p >A paragraph is a series of sentences that are organized and</p>
+                                   
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box1">
+                                <div class="box_all">
+                                    <img src="{% static 'css/2.avif' %}"  alt="" >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                   
+                                    <p >A paragraph is a series of sentences that are organized and</p>
+                                    
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box1">
+                                <div class="box_all">
+                                    <img src="{% static 'css/3.webp' %}"  alt=""  >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                
+                                    <p >A paragraph is a series of sentences that are organized and</p>
+                                    
+                                </div>
+                            </div >
+                        </div>
+                    </div>
+    
+                    <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box1">
+                                <div class="box_all">
+                                    <img src="{% static 'css/5.avif' %}" alt=""  >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                   
+                                    <p >A paragraph is a series of sentences that are organized and</p>
+                                    
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box1">
+                                <div class="box_all">
+                                    <img src="{% static 'css/6.avif' %}"  alt="" >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                  
+                                    <p class="">A paragraph is a series of sentences that are organized and</p>
+                                   
+                                </div>
+                            </div >
+                        </div>
+    
+                        <div class="col-md-12 col-lg-4">
+                            <div class="box1">
+                                <div class="box_all">
+                                    <img src="{% static 'css/7.avif' %}"  alt="" >
+                                </div>
+                                <div class="box_all">
+                                    <h6 class="mt-2">Grap Up to 15% OFF*</h6>
+                                
+                                    <p class="mt-0 mb-2" >A paragraph is a series of sentences that are organized and</p>
+                                    
+                                </div>
+                            </div >
+                        </div>
+                    </div>
+    
+                    <div class="mt-4">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-4">
+                                <div class="box1">
+                                    <div class="box_all">
+                                        <img src="{% static 'css/8.avif' %}" alt=""  >
+                                    </div>
+                                    <div class="box_all">
+                                        <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                       
+                                        <p >A paragraph is a series of sentences that are organized and</p>
+                                        
+                                    </div>
+                                </div >
+                            </div>
+        
+                            <div class="col-md-12 col-lg-4">
+                                <div class="box1">
+                                    <div class="box_all">
+                                        <img src="{% static 'css/9.webp' %}"  alt="" >
+                                    </div>
+                                    <div class="box_all">
+                                        <h6 class="mt-2 ">Grap Up to 15% OFF*</h6>
+                                      
+                                        <p class="">A paragraph is a series of sentences that are organized and</p>
+                                       
+                                    </div>
+                                </div >
+                            </div>
+        
+                            <div class="col-md-12 col-lg-4">
+                                <div class="box1">
+                                    <div class="box_all">
+                                        <img src="{% static 'css/10.avif' %}"  alt="" >
+                                    </div>
+                                    <div class="box_all">
+                                        <h6 class="mt-2">Grap Up to 15% OFF*</h6>
+                                    
+                                        <p>A paragraph is a series of sentences that are organized and</p>
+                                        
+                                    </div>
+                                </div >
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}

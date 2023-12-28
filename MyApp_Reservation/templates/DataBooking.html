@@ -1,0 +1,57 @@
+{% extends 'mains/main.html' %}
+{%  load static %}
+
+
+{%  block title %} Ticket Reservations All {% endblock title %}
+
+{%  block content  %}
+
+
+<div class="container">
+    <h1>Booking Details</h1>
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="boders_sections">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Destination_From</th>
+                <th scope="col">Destination To</th>
+                <th scope="col">Dates</th>
+                <th scope="col">Times</th>
+                <th scope="col">Total Peoples</th>
+                <th scope="col">Adults</th>
+                <th scope="col">Peoples</th>
+                <th class="col">Ac or Non Ac</th>
+                <th class="col">Class Lover Upper Middel</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+            {% for items in customer %}
+              <tr>
+                <td>{{items.id}}</td>
+                <td>{{items.destination_From}}</td>
+                <td>{{items.destination_To}}</td>
+                <td>{{items.dates}}</td>
+                <td>{{items.times}}</td>
+                <td>{{items.how_maney_peoples}}</td>
+                <td>{{items.kits}}</td>
+                <td>{{items.big_peoples}}</td>
+                <td>{{items.ac_non_ac}}</td>
+                <td>{{items.lover_upper_middle}}</td>
+                <td><a href="{% url 'update' items.pk %}" class="btn btn-primary">Edit</a></td>
+                <td><a href="{% url 'delete' items.pk %}" class="btn btn-danger">Delete</a></td>
+              </tr>
+              {%  endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+{%  endblock content  %}

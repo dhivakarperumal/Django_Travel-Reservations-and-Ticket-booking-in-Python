@@ -1,0 +1,45 @@
+{% extends 'mains/main.html' %}
+{% load static %}
+
+
+{% block title %} Ticket Conform {% endblock title %}
+
+{% block content %}
+
+<div class="banner_sections">
+    <div class="container">
+        <div class="row ">
+            <div class="banner1" style="margin-top: 60px;">
+                <div class="col-md-12 col-lg-6 mt-3 mb-5">
+                    <h1 class="text-center mb-5">Success Order Print Your Ticket</h1>
+                    {% if latest_entry  or  last %}
+                    <p><b>OrderNumber:</b>195056748{{ latest_entry.id }}</p>
+                    <p><b>Name:</b>{{ latest_entry.name }}</p>
+                    <p><b>Destinaons:</b>{{ last.destination_From }} To {{last.destination_To}}</p>
+                    <p><b>Total Coutns:</b> {{last.how_maney_peoples }}</p>
+                    <p><b>Dates:</b>{{last.dates}}</p>
+                    <p><b>Email:</b>{{latest_entry.email}}</p>
+                    <p><b>Mobile No:</b>{{latest_entry.contact }}</p>  
+                    <p><b>Address:</b>{{latest_entry.address}}</p>
+                  
+                  {% else %}
+                     <p>No entries available.</p>
+                  {% endif %}
+
+                    <div class="text-center mt-4"> 
+                        <button onclick="printpages()" class="btn btn-success mt-4">Print Your Tickets</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+   function printpages(){
+    window.print();
+   }
+</script>
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'mains/main.html' %}
+{% load static %}
+
+
+{% block title %} Ticket Reservations All {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="bands mt-4">
+      <div class="col-md-12 col-lg-12">
+        <div class="row">
+          <div class="col-md-12 col-lg-3">
+            <div class="details_sections"><br><br>
+              <div><button class="btnnn1"><a href="{% url 'DataCustomer'  %}">Personal Details</a></button></div><br>
+              <div><button class="btnnn2"><a href="{%  url 'DataBooking' %}">Booking Details</a></button></div><br>
+              <div><button class="btnnn3"><a href="{%  url 'DataPayaments' %}">Payment Details</a></button></div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-9">
+            <div class="text-center">
+             <div class="back_sections_images">
+              <div class="new_sections">
+              <!-- <h1>All Details Updated Delete</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi 
+                eum illum, quam quo explicabo et a beatae qui architecto odio pariatur consequuntur. 
+                Dolor labore totam, mollitia adipisci inventore tempora laudantium?</p> -->
+             </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

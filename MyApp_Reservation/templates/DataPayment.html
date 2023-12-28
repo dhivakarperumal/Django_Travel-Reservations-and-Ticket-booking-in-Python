@@ -1,0 +1,44 @@
+{% extends 'mains/main.html' %}
+{%  load static %}
+
+
+{%  block title %} Ticket Reservations All {% endblock title %}
+
+{%  block content  %}
+
+<div class="container">
+    <h1>Payments Details</h1>
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="boders_sections">
+          <table class="table">
+            <thead class="baorde">
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">UPID</th>
+                <th scope="col">Payment Types</th>
+                <th scope="col">TransectionId</th>
+                <th scope="col">Amount</th>
+                <th scope="col">SendMoneyName</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for items in payments %}
+              <tr>
+                <td>{{items.id}}</td>
+                <td>{{items.upid}}</td>
+                <td>{{items.payment_type_name}}</td>
+                <td>{{items.transection_id}}</td>
+                <td>{{items.amount}}</td>
+                <td>{{items.send_monay_our_name}}</td>
+              </tr>
+              {%  endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{%  endblock content  %}

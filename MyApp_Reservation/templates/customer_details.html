@@ -1,0 +1,70 @@
+{% extends 'mains/main.html' %}
+{%  load static %}
+
+
+{%  block title %} Ticket Reservations All {% endblock title %}
+
+{%  block content  %}
+
+    <div class="banner_sections">
+        <div class="container">
+            <div class="row">
+                <div class="banner">
+                <div class="col-md-12 col-lg-6">
+                        
+                        <h2 class="heads">{% if form.instance.pk %}Edit Personal Details{% else %}Personal Details {% endif %}</h2>
+                        <form method="post"  class="my-form">
+                                {% csrf_token %}
+                                <div class="form-group mb-3">
+                                    <label><b>Username</b></label>
+                                    {{ form.name }}
+                                </div>
+                               
+                                <div class="form-group mb-3">
+                                    <label><b>FatherName</b></label>
+                                    {{ form.father_name }}
+                                </div>
+                               
+                                <div class="form-group mb-3">
+                                    <label><b>Email</b></label>
+                                    {{ form.email }}
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label><b>D O B</b></label>
+                                    {{ form.data_of_birth }}
+                                </div>
+
+
+                                <div class="form-group mb-3">
+                                    <label><b>Age</b></label>
+                                    {{ form.age }}
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label><b>Gender</b></label>
+                                    {{ form.gender }}
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label><b>Contact</b></label>
+                                    {{ form.contact }}
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label><b>Address</b></label>
+                                    {{ form.address }}
+                                </div>
+                                <br>
+                                <div class="text-center mt-4"> 
+                                    <button type="submit" class="btn btn-success">Save</button>
+                                    <button type="submit" class="btn btn-primary"><a href="{%  url 'booking_details' %}">Next</a></button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{%  endblock content  %}

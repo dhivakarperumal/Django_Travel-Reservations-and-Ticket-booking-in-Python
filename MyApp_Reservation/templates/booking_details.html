@@ -1,0 +1,78 @@
+{% extends 'mains/main.html' %}
+{%  load static %}
+
+
+{%  block title %} Ticket Reservations All {% endblock title %}
+
+{%  block content  %}
+
+<div class="banner_sections">
+    <div class="container">
+        <div class="row">
+            <div class="banner">
+            <div class="col-md-12 col-lg-6">
+                    
+                    <h2 class="heads">{% if form.instance.pk %}Edit Booking Details {% else %}Booking Details{% endif %}</h2>
+                    <form method="post" class="my-form">
+                            {% csrf_token %}
+                            <div class="form-group mb-3">
+                                <label><b>Destination From</b></label>
+                                {{ form.destination_From }}
+                            </div>
+                           
+                            <div class="form-group mb-3">
+                                <label><b>Destination To</b></label>
+                                {{ form.destination_To }}
+                            </div>
+                           
+                            <div class="form-group mb-3">
+                                <label><b>Date</b></label>
+                                {{ form.dates }}
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label><b>Time</b></label>
+                                {{ form.times }}
+                            </div>
+
+
+                            <div class="form-group mb-3">
+                                <label><b>Counts</b></label>
+                                {{ form.how_maney_peoples }}
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label><b>Adalts</b></label>
+                                {{ form.kits }}
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label><b>Peoples</b></label>
+                                {{ form.big_peoples }}
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label><b>Ac OR Non Ac</b></label>
+                                {{ form.ac_non_ac }}
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label><b>Class Lover Upper Middels</b></label>
+                                {{ form.lover_upper_middle }}
+                            </div>
+                            <br>
+                            <div class="text-center mt-4"> 
+                                <button type="submit" class="btn btn-success  ">Save</button>
+                                <button type="submit" class="btn btn-primary  "><a href="{%  url 'payments' %}">Next</a></button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%  endblock content  %}
+
+

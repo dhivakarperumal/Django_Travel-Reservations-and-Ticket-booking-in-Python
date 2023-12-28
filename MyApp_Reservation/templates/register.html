@@ -1,0 +1,46 @@
+{% extends 'mains/main.html' %}
+{%  load static %}
+{%  block title %}  Register {% endblock title %}
+
+
+{%  block content  %}
+
+
+<div class="banner_sections">
+    <div class="container">
+        <div class="row " >
+            <div class="banner" style="margin-top: 50px;">
+                <div class="col-md-12 col-lg-6 mt-5 mb-5">
+                    <h1 class="text-center">SIGIN UP</h1>
+                    <form method="post">
+                        {%  csrf_token %}
+                        <div class="mb-4">
+                            <label for="" class="form-lable">UserName</label>
+                            {{ form.username }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="" class="form-lable">Email</label>
+                            {{ form.email }}
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="form-lable">Password</label>
+                            {{ form.password1 }}
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="form-lable">Conform Password</label>
+                            {{ form.password2 }}
+                        </div>
+
+                        <div class="text-center"><button type="submit" class="btn btn-primary">Sigin Up</button></div>
+                    </form>
+
+                    <p class="mt-4 text-center"  >Allredy user  <a href="{% url 'login' %}" class="text-dark">Login Now</a>  </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%  endblock content  %}
